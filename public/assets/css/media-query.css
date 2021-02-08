@@ -147,8 +147,6 @@
     max-height: auto;
     max-width: 120px;
   }
-
-  .slick-track .slick-track { display: none; }
   
 }
 
@@ -159,70 +157,106 @@
     width: 576px;
   }
   
-  #third-folder {
-    display: none;
+  /* content styling  */
+  
+  .messages-to-user {
+    padding: 10px;
+    height:fit-content;
+  }
+  
+  .messages-to-user>p {
+    font-size: 0.9rem;
   }
 
-  #second-folder {
-    display: none;
+  /* my account page */
+
+  
+
+  /* add new item page */
+
+  div.col {
+    padding: 10px;
+  }
+  
+  /* saved outfits page and create new outfit page */
+
+  #delete-outfit, 
+  #add-to-calendar, 
+  #remove-from-calendar,
+  button.select-outfit {
+    height: 50px;
+    font-size: 0.9rem;
   }
 
-  #first-folder {
-    transform: translateY(-2px);
+  #create-outfit, 
+  #clear-outfit,
+  #outfit-name,
+  #item-filter {
+    width: 100%;
+    height: 50px;
+    font-size: 0.9rem;
   }
+
+  #outfit-creator {
+    height: unset;
+    padding: 12px;
+  }
+
+  #outfit-view {
+    height: unset;
+  }
+
+  /* button.select-outfit {
+    position: absolute;
+    top: 40px;
+    display: block;
+  } */
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 790px) and (max-width: 991.98px) {
 
-  #third-folder {
-    display: none;
-  }
-
-  #second-folder {
-    display: none;
-  }
-  
+    
  ul.nav.nav-tabs {
     width: 790px;
   }
+
+  /* content styling  */
+  
+  /* my account page */
+
+  /* add new item page */
+  
+  /* saved outfits page and create new outfit page */
 
 }
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) and (max-width: 1200px) { 
   
-  #first-folder {
-    transform: translateY(-2px);
-  }
-
-  #third-folder {
-    display: none;
-  }
-
-  #second-folder {
-    display: none;
-  }
-
-  ul.nav.nav-tabs {
+    ul.nav.nav-tabs {
     width: 790px;
   }
+
+  /* content styling  */
+  
+  /* my account page */
+
+  /* add new item page */
+  
+  /* saved outfits page and create new outfit page */
 
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
   
-  #first-folder {
-    display: none;
-  }
+  /* content styling  */
   
-  #second-folder {
-    display: none;
-  }
+  /* my account page */
 
-  #third-folder {
-    display: none;
-  }
+  /* add new item page */
+  
+  /* saved outfits page and create new outfit page */
 }
