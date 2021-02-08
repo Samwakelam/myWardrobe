@@ -153,8 +153,31 @@
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (min-width: 550px) and (max-width: 790px) { 
   
+  /* nav styling */
+  
   ul.nav.nav-tabs {
-    width: 576px;
+    width: 650px;
+  }
+
+  #my-account-tab,
+  #add-new-tab {
+    background-color: #f0efeb;
+    margin-top: 0;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  #saved-outfits-tab,
+  #my-wardrobe-tab {
+    border-bottom: unset;
+  }
+
+  nav > ul > li.nav-item#saved-outfits-tab > a.nav-link {
+    border-bottom: unset;
+  }
+
+  nav > ul > li.nav-item#my-wardrobe-tab > a.nav-link {
+    border-bottom: unset;
   }
   
   /* content styling  */
@@ -165,7 +188,7 @@
   }
   
   .messages-to-user>p {
-    font-size: 0.9rem;
+    font-size: 0.9rem;#
   }
 
   /* my account page */
@@ -214,29 +237,45 @@
 
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 790px) and (max-width: 991.98px) {
 
-    
- ul.nav.nav-tabs {
-    width: 790px;
-  }
-
-  /* content styling  */
-  
-  /* my account page */
-
-  /* add new item page */
-  
-  /* saved outfits page and create new outfit page */
-
-}
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) and (max-width: 1200px) { 
   
-    ul.nav.nav-tabs {
-    width: 790px;
+  ul.nav.nav-tabs {
+    width: 650px;
+  }
+
+  #my-account-tab,
+  #add-new-tab {
+    background-color: #f0efeb;
+    margin-top: 0;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  #saved-outfits-tab,
+  #my-wardrobe-tab {
+    border-bottom: unset;
+  }
+
+  nav > ul > li.nav-item#saved-outfits-tab > a.nav-link {
+    border-bottom: unset;
+  }
+
+  nav > ul > li.nav-item#my-wardrobe-tab > a.nav-link {
+    border-bottom: unset;
+  }
+  
+  /* content styling  */
+  
+  .messages-to-user {
+    padding: 10px;
+    height:fit-content;
+  }
+  
+  .messages-to-user>p {
+    font-size: 0.9rem;#
   }
 
   /* content styling  */
