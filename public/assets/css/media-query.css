@@ -147,6 +147,8 @@
     max-height: auto;
     max-width: 120px;
   }
+
+  .slick-track .slick-track { display: none; }
   
 }
 
