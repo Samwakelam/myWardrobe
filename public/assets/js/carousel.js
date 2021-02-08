@@ -37,6 +37,8 @@ $(function () {
     slidesToShow: 5,
     autoplay: true,
     rtl: true,
+    infinite: true,
+    
     responsive: [
       {
         breakpoint: 768,
@@ -48,7 +50,7 @@ $(function () {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 550,
         settings: {
           arrows: false,
           centerMode: true,
