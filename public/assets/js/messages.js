@@ -40,7 +40,7 @@ function messageData() {
     'Tip: Click on items from the carousels to create your outfit.',
     'Tip: Five items will be visible in the creator, but it will hold more.',
     'Tip: The filter menu will show you specific category items like skirts',
-    'Tip: Filter view all to get the full wardrobe back again.',
+    `Tip: Filter 'View All' to get the full wardrobe back again.`,
   ];
 
   const myWardrobeAlerts = {
