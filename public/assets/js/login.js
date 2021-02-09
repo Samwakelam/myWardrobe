@@ -17,6 +17,7 @@ function welcomeFirstTime(name) {
    <div class='welcomeFirst'>
     <h1>Welcome ${name}!</h1>
     <h3> Add Your Items to get started!</h3>
+    <button class='signOut'>Sign Out</button>
     </div>
    `;
 }
