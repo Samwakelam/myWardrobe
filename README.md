@@ -172,11 +172,15 @@ Moving forward with this application, these are the key areas we'd like to devel
 (07.02.2021)
 - Instructions added to Login Page.
 - Add Item structure improved and code slimmed. 
-- Mobile view improved.
+- Mobile view improved.   
+
+![SavedOutfits Page](./public/assets/img/extras/Screen-shot-mobile.png)
 
 (09.02.2021)
 - All responsive behaviour improved.
-- Carousel Breakpoints imporved for mobile view. 
+- Carousel Breakpoints imporved for mobile view.    
+
+![SavedOutfits Page](./public/assets/img/extras/Screen-shot-ipad.png)
 
 ## Learning
 
