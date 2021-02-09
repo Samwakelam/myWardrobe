@@ -15,7 +15,6 @@ body {
 /* ------------------------ main / general styling ----------------------- */
 
 main {
-  min-width: 90%;
   min-height: 90vh;
   margin: 4vh;
   position: relative;

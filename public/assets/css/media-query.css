@@ -9,6 +9,7 @@
     background-position: top;
     margin: 12px 12px 0 12px;
     justify-content: center;
+    width: 380px;
   }
   
   nav > ul > li.nav-item {
@@ -143,10 +144,10 @@
     max-width:30%;
   }
 
-  .carousel > div > div > img {
+  /* .carousel > div > div > img {
     max-height: auto;
     max-width: 120px;
-  }
+  } */
   
 }
 
@@ -237,10 +238,8 @@
 
 }
 
-
-
 /* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) and (max-width: 1200px) { 
+@media screen and (min-width: 790px) and (max-width: 1200px) { 
   
   ul.nav.nav-tabs {
     width: 650px;
