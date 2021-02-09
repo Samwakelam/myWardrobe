@@ -99,7 +99,7 @@ function imageSubmit() {
   if (theFile.length > 1 || theFile.length === 0) {
     return badUpload();
   }
-  
+
   /* Form to send the file in to Cloudinary */
   const formData = new FormData();
   Object.keys(theFile).forEach((key) => {

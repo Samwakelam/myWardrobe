@@ -34,7 +34,7 @@ and decides what to return to the UI
     url: '/',
     data: storageObject,
   }).then((res) => {
-    console.log("res",res); 
+    console.log('res', res);
     if (res.length > 0) {
       const userID = res[0].id;
       localStorage.setItem('userID', userID);

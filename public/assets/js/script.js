@@ -6,7 +6,7 @@ $(document).ready(function () {
   const fileChosen = $('#file-chosen');
   const itemFilter = $('#item-filter');
 
-  
+
 
   // ------- getCatId  -----------------------------------
   // Gets the category Id from the database referenced by the outfit name
@@ -59,10 +59,10 @@ $(document).ready(function () {
 
   // event listeners
   itemFilter.change(filterCarousel);
-  
+
   $(document).on('change', '#myFile',function(){
     const text = this.files[0].name;
-    fileChosen.text(text)
+    fileChosen.text(text);
   });
 
 });

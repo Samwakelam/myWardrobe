@@ -38,7 +38,7 @@ $(function () {
     autoplay: true,
     rtl: true,
     infinite: true,
-    
+
     responsive: [
       {
         breakpoint: 768,
