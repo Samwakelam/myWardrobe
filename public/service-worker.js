@@ -29,7 +29,6 @@ const FILES_TO_CACHE = [
   '/assets/img/icon-512x512.png',
   '/assets/img/extras/coat-hanger-hover.png',
   '/assets/img/extras/coat-hanger.png',
-
 ];
 // install
 self.addEventListener('install', function (evt) {
@@ -39,14 +38,15 @@ self.addEventListener('install', function (evt) {
   // );
   // pre cache all static assets
   evt.waitUntil(
-    caches.open(CACHE_NAME)
-    .then((cache) => {
-      console.log({cache});
-      cache.addAll(FILES_TO_CACHE);
-    })
-    .catch((err) => {
-      console.log({err});
-    })
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => {
+        console.log({ cache });
+        cache.addAll(FILES_TO_CACHE);
+      })
+      .catch((err) => {
+        console.log({ err });
+      })
   );
   // tell the browser to activate this service worker immediately once it
   // has finished installing
@@ -83,7 +83,7 @@ self.addEventListener('fetch', function (evt) {
               }
               return response;
             })
-            .catch((err) => { /* eslint-disable-line no-unused-vars */
+            .catch((err) => {/* eslint-disable-line no-unused-vars */
               // Network request failed, try to get it from the cache.
               return cache.match(evt.request);
             });
