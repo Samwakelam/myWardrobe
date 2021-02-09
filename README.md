@@ -174,6 +174,10 @@ Moving forward with this application, these are the key areas we'd like to devel
 - Add Item structure improved and code slimmed. 
 - Mobile view improved.
 
+(09.02.2021)
+- All responsive behaviour improved.
+- Carousel Breakpoints imporved for mobile view. 
+
 ## Learning
 
 As a team we have been able to develop skills in working in a close enviroment on the same files and functions. We started by splitting the tasks by front or back-end set up to help contain 'toe stepping' and cross coding. 
