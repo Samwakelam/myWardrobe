@@ -55,4 +55,4 @@ db.selectAllUsers = selectAllUsers;
 db.selectUserByName = selectUserByName;
 db.selectUserByID = selectUserByID;
 
-module.exports = { db, selectUserByName };
+module.exports = db ;

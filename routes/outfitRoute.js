@@ -7,66 +7,72 @@ const outfitModel = require('../models/outfit');
 const plannerModel = require('../models/planner');
 
 //  just gets one outfit by specified id
-router.get('/getName/:outfitID', async function (req, res, next) {
+router.get('/getName/:outfitID', async function (req, res) {
   // console.log('req.body.outfitID =', req.params.outfitID);
-  const select = await outfitModel.selectUsersOutfit(req.params.outfitID);
-  console.log({ 'GET outfit/getName/:outfitID': next });
-  res.send(select);
+  await outfitModel.selectUsersOutfit(req.params.outfitID)
+  .then((select) =>{
+    res.send(select);
+  })
+  .catch((err) => {
+    res.status(401).json(err);
+  });
 });
 
 // gets all planned outfits for user
-router.get('/inPlanner/:userID', async function (req, res, next) {
+router.get('/inPlanner/:userID', async function (req, res) {
   const userID = req.params.userID;
   if (!userID) {
     return res.send('no user ID');
+  } else {
+    await plannerModel.getExisitngDates(userID)
+    .then((select) =>{
+      res.send(select);
+    })
+    .catch((err) => {
+      res.status(401).json(err);
+    });
   }
-  const select = await plannerModel.getExisitngDates(userID);
-  console.log({ 'GET outfit/inPlanner/:userID': next });
-  res.send(select);
 });
 
 // add new outfit
-router.post('/newOutfit', async function (req, res, next) {
+router.post('/newOutfit', async function (req, res) {
   const user = await userModel.selectUserByName(req.body.userID);
-  try {
-    const add = await outfitModel.addNewOutfit(req.body.name, user[0].id);
-    console.log({ 'POST outfit/newOutfit': next });
+  
+  await outfitModel.addNewOutfit(req.body.name, user[0].id)
+  .then((add) =>{
     res.send(add);
-  } catch {
-    res.status(401);
-    res.end();
-  }
-});
-
-/*
-router.post('/newOutfit', async function (req, res, next) {
-  const user = await userModel.selectUserByName(req.body.userID);
-  outfitModel.addNewOutfit(req.body.name, user[0].id).then(()=> {
-    res.redirect(307, '/')
-  }).catch(error => {
-    res.status(401).json(error)
+  })
+  .catch((err) => {
+    res.status(401).json(err);
   });
 });
-*/
 
 // add items to outfit
-router.post('/addItems', async function (req, res, next) {
-  console.log('req.body =', req.body);
-  const post = await outfitModel.addToOutfit(
+router.post('/addItems', async function (req, res) {
+  // console.log('req.body =', req.body);
+  await outfitModel.addToOutfit(
     req.body.itemID,
     req.body.outfitID,
     req.body.userID
-  );
-  console.log({ 'POST outfit/addItems': next });
-  res.send(post);
+  )
+  .then((post) =>{
+    res.send(post);
+  })
+  .catch((err) => {
+    res.status(401).json(err);
+  });
 });
 
 // delete outfit
-router.delete('/delete/:outfitID', async function (req, res, next) {
+router.delete('/delete/:outfitID', async function (req, res) {
   // console.log('req.params =', req.params);
-  const del = await outfitModel.deleteOutfit(req.params.outfitID);
-  console.log({ 'DELETE outfit/delete/:outfitID': next });
-  res.send(del);
+  await outfitModel.deleteOutfit(req.params.outfitID)
+  .then((del) =>{
+    res.send(del);
+  })
+  .catch((err) => {
+    res.status(401).json(err);
+  });
 });
 
 module.exports = router;
