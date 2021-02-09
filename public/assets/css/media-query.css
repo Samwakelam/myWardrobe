@@ -143,11 +143,6 @@
   #outfit-creator>img {
     max-width:30%;
   }
-
-  /* .carousel > div > div > img {
-    max-height: auto;
-    max-width: 120px;
-  } */
   
 }
 
@@ -189,14 +184,10 @@
   }
   
   .messages-to-user>p {
-    font-size: 0.9rem;#
+    font-size: 0.9rem;
   }
 
-  /* my account page */
-
-  
-
-  /* add new item page */
+    /* add new item page */
 
   div.col {
     padding: 10px;
@@ -229,12 +220,6 @@
   #outfit-view {
     height: unset;
   }
-
-  /* button.select-outfit {
-    position: absolute;
-    top: 40px;
-    display: block;
-  } */
 
 }
 
@@ -274,27 +259,7 @@
   }
   
   .messages-to-user>p {
-    font-size: 0.9rem;#
+    font-size: 0.9rem;
   }
 
-  /* content styling  */
-  
-  /* my account page */
-
-  /* add new item page */
-  
-  /* saved outfits page and create new outfit page */
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-  
-  /* content styling  */
-  
-  /* my account page */
-
-  /* add new item page */
-  
-  /* saved outfits page and create new outfit page */
 }
